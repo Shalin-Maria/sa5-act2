@@ -7,3 +7,9 @@ def check_palindrome(text):
 
 text = input("Enter text to check for palindrome: ")
 check_palindrome(text)
+try:
+    filepath = input("Enter filepath for palindrome check: ")
+    text = open(filepath, "r").read()
+    check_palindrome(text)
+except OSError:
+    print(f"Unable to process file at {filepath}")
